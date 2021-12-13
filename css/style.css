@@ -121,11 +121,16 @@ footer {
 .card {
   padding: 15px 20px;
   margin-bottom: 20px;
-  border-radius: 20px;
+  border-radius: 12px;
 }
 
 .card h2 {
   margin-bottom: 10px;
+  color: rgb(3, 2, 59);
+}
+
+.card:hover {
+  box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.5);
 }
 
 .list {
