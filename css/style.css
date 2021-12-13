@@ -101,10 +101,6 @@ h1 {
   box-sizing: border-box;
 } */
 
-footer {
-  margin-bottom: 500px;
-}
-
 .bg-yellow {
   background-color: rgb(241, 237, 175);
 }
@@ -278,4 +274,8 @@ td {
 
 .bottom-menu-text {
   padding-top: 20px;
+}
+
+footer {
+  margin-bottom: 50px;
 }
