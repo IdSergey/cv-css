@@ -32,10 +32,6 @@ a:active {
   color: aqua;
 }
 
-h1 {
-  color: rgba(255, 127, 80, 1);
-}
-
 .avatar {
   /* width: 200px; */
   height: 250px;
@@ -61,9 +57,13 @@ h1 {
   margin-left: 40px;
 }
 
+.info-text h1 {
+  color: rgb(77, 23, 94);
+}
 .info-text h4 {
   margin-bottom: 0px;
 }
+
 .info-text ul {
   margin-top: 10px;
 }
