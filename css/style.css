@@ -58,7 +58,8 @@ a:active {
 }
 
 .info-text h1 {
-  color: rgb(77, 23, 94);
+  /* color: rgb(77, 23, 94); */
+  color: rgb(129, 0, 0);
 }
 .info-text h4 {
   margin-bottom: 0px;
