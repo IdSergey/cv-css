@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap");
 
-* {
+/* * {
   padding: 0px;
   margin: 0px;
-}
+} */
 /* ul {
   margin: 0px;
   padding: 0px;
@@ -187,12 +187,12 @@ td {
   background-color: rgb(226, 253, 221);
 }
 .table td:nth-child(2),
-.table td:nth-child(3) {
+.table td:nth-child (3) {
   color: #777;
   
 }
 
-.table tr:nth-child(even) {
+.table tr:nth-child (even) {
   /* background-color: #ddd; */
   /* border-bottom: 2px solid red; */
 }
