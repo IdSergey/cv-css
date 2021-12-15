@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="js/animation.js"></script> -->
+
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .green {
+        background-color: rgb(176, 247, 176);
+      }
+      .red {
+        background-color: rgb(240, 188, 188);
+      }
+      /* Задаем высоту большим блокам, чтобы у нас на странице получится скролл */
+      .element-big {
+        width: 100%;
+        height: 800px;
+      }
+      .element-animation {
+        margin: 2rem 0;
+        font-size: 3rem;
+
+        /* Скроем элемент в начальном состоянии */
+        opacity: 0;
+        transform: translateY(100%);
+      }
+      .element-animation.element-show {
+        opacity: 1;
+        transition: all 1s;
+        transform: translateY(0%);
+      }
+    </style>
+    <div class="wrap">
+      <div class="element-big green"></div>
+      <div class="element-animation">
+        <span>Элемент, который появляется</span>
+      </div>
+      <div class="element-big red"></div>
+    </div>
+
+    <script>
+      function onEntry(entry) {
+        entry.forEach((change) => {
+          if (change.isIntersecting) {
+            change.target.classList.add("element-show");
+          }
+        });
+      }
+      let options = { threshold: [0.5] };
+      let observer = new IntersectionObserver(onEntry, options);
+      let elements = document.querySelectorAll(".element-animation");
+      for (let elm of elements) {
+        observer.observe(elm);
+      }
+    </script>
+  </body>
+</html>

@@ -3,16 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animation.css" />
     <title>SERGIO ID CV</title>
   </head>
   <body>
+    <a name="up"></a>
     <div class="container">
       <div class="info">
-        <img class="avatar" src="img/avatar.jpg" alt="тут моя фотка" />
+        <img class="avatar" src="img/avatar.jpg" alt="моя фотка" />
         
         <div class="info-text">
           <h1>Sergio iD</h1>
-          <p>Я web developer, <strong>freelancer.</strong></p>
+          <p>Я web developer, freelancer.</p>
           <p>Я люблю путешестовать, заниматься спортом и программировать.</p>
 
           <h4>Мои контакты</h4>
@@ -23,21 +25,54 @@
         </div>
       </div>
 
-      <div class="card bg-green ">
-        <h2>Опыт работы</h2>
-        <table class="table">
+
+      <div class="card bg-green element-animation">
+        <div class="head-block">
+          <h2>Образование</h2>
+          <div class="open-close">
+             <a onclick="toggle('education')">&#8597;</a>
+          </div>
+        </div>
+
+        <table class="table" id="education">
+          <thead>
+          <tr>
+            <th>Название</th>
+            <th>Спецмальность</th>
+            <th>Годы</th>
+          </tr>
+          </thead>
+        <tbody>
+          <tr>
+            <td>КГТУСиА (КИСИ)</td>
+            <td>САПР</td>
+            <td>1992 - 1997</td>
+          </tr>
+        </tbody>
+        </table>
+
+      </div>
+      <div class="card bg-green element-animation">
+        <div class="head-block">
+          <h2>Опыт работы</h2>
+          <div class="open-close">
+            <a onclick="toggle('rabota')">&#8597;</a>
+          </div>
+        </div>
+
+        <table class="table" id="rabota">
           <thead>
           <tr>
             <th>Компания</th>
             <th>Должность</th>
-            <th>Год</th>
+            <th>Годы</th>
           </tr>
           </thead>
         <tbody>
           <tr>
             <td>ФОП</td>
-            <td>Freelancer</td>
-            <td>2018 - 2021</td>
+            <td>Freelancer, web developer</td>
+            <td>2012 - 2021</td>
           </tr>
           <tr>
             <td>Univest prepress</td>
@@ -49,15 +84,69 @@
             <td>Engineer DTP</td>
             <td>1998 - 2006</td>
           </tr>
+          <tr>
+            <td>Министерство сельского хозяйства  <br>Украины. Отдел ИТ.</td>
+            <td>Программист</td>
+            <td>1997 - 1998</td>
+          </tr>
+          
         </tbody>
         </table>
       </div>
 
-      <div class="card bg-red">
-        <h2>Youtube Курсы</h2>
-      <ul class="link-list">
+      <div class="card bg-red element-animation">
+
+        <div class="head-block">
+          <h2>Портфолио</h2>
+          <p>В фирме ARTIUM участвовал в разработке сайтов как backend developer.</p>
+          <div class="open-close">
+            <a onclick="toggle('portfolio')">&#8597;</a>
+          </div>
+        </div>
+
+      <ul class="link-list" id="portfolio">
           <li>
-            <a href="https://www.youtube.com/watch?v=aQkgUUmUJy4&list=PLqKQF2ojwm3l4oPjsB9chrJmlhZ-zOzWT" target="_blank">Урок 1. JavaScript. Что такое prototype. JavaScript Prototype (English Subs)</a>
+            <a href="https://emotsii.com.ua/" target="_blank">ФОТОСТУДІЯ EMOTSII</a>
+          </li>
+          <li>
+            <a href="https://ozonbud.com.ua/" target="_blank"> «ОЗОНБУД»</a>
+          </li>
+          <li>
+            <a href="https://upu.net.ua/" target="_blank">“UNITED PETROLIUM UKRAINE” LLC </a>
+          </li>
+          <li>
+            <a href="https://609060.info/" target="_blank">ZENTIVA Жіноче здоров’я – це головне</a>
+          </li>
+          <li>
+            <a href="https://energoservice.ua/" target="_blank">Енергосервіс</a>
+          </li>
+          <li>
+            <a href="https://www.maxway.com.ua/" target="_blank">MAXWAY</a>
+          </li>
+          <li>
+            <a href="http://teknofood.com.ua/" target="_blank">«ТЕКНОФУД УКРАИНА» </a>
+          </li>
+          <li>
+            <a href="https://www.oriental-studies.org.ua/" target="_blank">Інститут сходознавства ім. А.Ю. Кримського НАН України</a>
+          </li>
+          <li>
+            <a href="http://www.granitviol.com.ua/" target="_blank">ГРАНИТВИОЛ</a>
+          </li>
+
+      </ul>
+      </div>
+
+      <div class="card bg-red element-animation">
+        <div class="head-block">
+          <h2>Youtube Курсы</h2>
+          <div class="open-close">
+            <a onclick="toggle('youtube')">&#8597;</a>
+          </div>
+        </div>
+
+      <ul class="link-list" id="youtube">
+          <li>
+            <a href="https://www.youtube.com/watch?v=aQkgUUmUJy4&list=PLqKQF2ojwm3l4oPjsB9chrJmlhZ-zOzWT" target="_blank">JavaScript. Что такое prototype. JavaScript Prototype (English Subs)</a>
           </li>
           <li>
             <a href="https://www.youtube.com/watch?v=SpCUuyZZTp8" target="_blank"> CSS для Начинающих - Практический Курс [2021]</a>
@@ -66,9 +155,15 @@
       </ul>
       </div>
 
-      <div class="card bg-yellow">
-        <h2>Мои хобби</h2>
-        <ol class="list">
+      <div class="card bg-yellow element-animation">
+        <div class="head-block">
+          <h2>Мои хобби</h2>
+          <div class="open-close">
+            <a onclick="toggle('hobby')">&#8597;</a>
+          </div>
+        </div>
+
+        <ol class="list" id="hobby">
           <li>Велопрогулки</li>
           <li>Спорт: футбол, лыжи</li>
           <li>Путешествия</li>
@@ -76,7 +171,7 @@
         </ol>
       </div>
 
-      <div class="card bg-blue contact">
+      <div class="card bg-blue contact element-animation">
         <h2>Связаться со мной</h2>
 
         <form action="#">
@@ -99,6 +194,12 @@
 
           <input class="btn" type="submit" value="Связаться!" />
         </form>
+      </div>
+
+      <div class="up">
+        <div class="up-text">
+        <a href="#up">Наверх</a>
+      </div>
       </div>
 <!-- 
       <div class="bottom-menu">
@@ -123,7 +224,42 @@
         <div></div>
       </div>
     </div> -->
+    
     <footer></footer>
     <!-- END container -->
+
+    <script>
+      function toggle(name) {
+        let w = document.getElementById(name);
+          if (w.style.display == 'none') {
+            w.style.display='block';
+          }
+          else { 
+            // w.style.display='none';
+            w.addClass("opacity");
+            //='none';
+
+            
+        }
+      }
+    </script>
+
+<!-- Появление элементов на сайте -->
+<script>
+  function onEntry(entry) {
+    entry.forEach((change) => {
+      if (change.isIntersecting) {
+        change.target.classList.add("element-show");
+      }
+    });
+  }
+  let options = { threshold: [0.5] };
+  let observer = new IntersectionObserver(onEntry, options);
+  let elements = document.querySelectorAll(".element-animation");
+  for (let elm of elements) {
+    observer.observe(elm);
+  }
+</script>
+
   </body>
 </html>
