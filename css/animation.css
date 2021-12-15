@@ -4,7 +4,7 @@
 
   /* Скроем элемент в начальном состоянии */
   opacity: 0;
-  transform: translateY(100%);
+  /* transform: translateY(100%); */
 }
 .element-animation.element-show {
   opacity: 1;
