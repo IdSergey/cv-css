@@ -1,7 +1,6 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap"); */
 
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto:ital@1&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto:ital@1&display=swap");
 
 /* * {
   padding: 0px;
@@ -14,9 +13,10 @@
 
 body {
   background-color: antiquewhite;
-  font-size: 16px;
+  font-size: 1rem;
   /* font-family: "Roboto", sans-serif; */
-  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  font-family: "PT Sans", sans-serif;
 
   font-weight: normal;
   /* font-family: Arial, Helvetica, sans-serif; */
@@ -63,7 +63,7 @@ a:active {
   top: 0px;
   right: 0px;
 
-  text-align: right;  
+  text-align: right;
 }
 
 .info p {
@@ -83,7 +83,7 @@ a:active {
 }
 
 .info-text h1 {
-  margin-top: 10px;
+  margin-top: 1rem;
   color: rgb(129, 0, 0);
 }
 .info-text h4 {
@@ -93,13 +93,6 @@ a:active {
 .info-text ul {
   margin-top: 10px;
 }
-@media (max-width: 700px) {
-  .info {
-    display: block;
-    text-align: center;
-  }
-}
-
 
 .container {
   max-width: 750px;
@@ -155,22 +148,32 @@ a:active {
 .card:hover {
   box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.5);
   /* Анимация */
-  -webkit-transition: .4s ease-out;
+  -webkit-transition: 0.4s ease-out;
   /* -webkit-transition-delay: 0.5s; */
-  -o-transition: .4s ease-out;
+  -o-transition: 0.4s ease-out;
   /* -o-transition-delay: 0.5s; */
-  -moz-transition: .4s ease-out;
+  -moz-transition: 0.4s ease-out;
   /* -moz-transition-delay: 0.5s; */
-  transition: .4s ease-out;
+  transition: 0.4s ease-out;
   /* transition-delay: 0.5s; */
 }
 
-.list {
-  padding: 0 20px;
-  /* list-style: none; */
+.list,
+.link-list {
+  /* padding: 0 20px; */
+  list-style-type: circle;
+  /* margin-left: 20px; */
 }
 .list li {
   margin-bottom: 10px;
+  /* padding: 0 20px; */
+}
+.link-list li,
+.list li {
+  margin-bottom: 10px;
+  padding-bottom: 3px;
+  /* padding-left: 10px; */
+  /* border-bottom: 1px solid #ccc; */
 }
 
 .table {
@@ -194,24 +197,14 @@ td {
 .table td:nth-child(2),
 .table td:nth-child (3) {
   color: #777;
-  
 }
 
 .table tr:nth-child (even) {
   /* background-color: #ddd; */
   /* border-bottom: 2px solid red; */
 }
-
-.link-list {
-  list-style: none;
-  padding: 0px;
-}
-
-.link-list li {
-  margin-bottom: 10px;
-  padding-bottom: 3px;
-  padding-left: 10px;
-  border-bottom: 1px solid #ccc;
+thead {
+  font-weight: bold;
 }
 
 .contact h2 {
@@ -320,20 +313,27 @@ footer {
 
 /* Кнопка НАВЕРХ */
 .up {
-  position: relative;
+  position: sticky;
   /* top: 50%; */
   /* right: 0px; */
   /* width: 50px; */
   height: 50px;
   border-radius: 50px;
-  background-color: darkgrey;
+  background-color: rgb(189, 189, 189);
   text-align: center;
-  border;
 }
 
-.up-text{
-  vertical-align: middle;
-  text-transform:uppercase;
-  padding-top: 15px;
+.up-text
+/* .up-text-link */ {
+  /* vertical-align: middle; */
+  /* vertical-align: super; */
+
+  height: inherit;
+  text-transform: uppercase;
+  /* padding-top: 15px; */
+
   /* margin-top: 25px!important;  */
+}
+.up-text a {
+  vertical-align: middle;
 }
