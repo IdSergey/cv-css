@@ -11,3 +11,17 @@
     font-size: large;
   }
 }
+
+@media (max-width: 360px) {
+  body {
+    font-size: 16px;
+  }
+  .info {
+    display: block;
+    text-align: center;
+    font-size: large;
+  }
+  .container {
+    font-size: large;
+  }
+}
