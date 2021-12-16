@@ -12,21 +12,21 @@
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 414px) {
   body {
-    font-size: 16px;
+    font-size: 20px;
   }
   .info {
     display: block;
     text-align: center;
-    font-size: xx-large;
+    /* font-size: xx-large; */
   }
   .container {
-    font-size: xx-large;
+    /* font-size: xx-large; */
   }
 
   .form-group input,
   .form-group textarea {
-    font-size: xx-large;
+    /* font-size: xx-large; */
   }
 }
