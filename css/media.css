@@ -19,9 +19,14 @@
   .info {
     display: block;
     text-align: center;
-    font-size: large;
+    font-size: xx-large;
   }
   .container {
-    font-size: large;
+    font-size: xx-large;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: xx-large;
   }
 }
