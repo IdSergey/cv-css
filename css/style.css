@@ -127,13 +127,16 @@ a:active {
 } */
 
 .bg-yellow {
-  background-color: rgb(241, 237, 175);
+  /* background-color: rgb(241, 237, 175); */
+  background: linear-gradient(rgb(241, 237, 175), rgb(248, 246, 219));
 }
 .bg-green {
-  background-color: rgb(203, 253, 193);
+  /* background-color: rgb(203, 253, 193); */
+  background: linear-gradient(rgb(203, 253, 193), rgb(232, 243, 229));
 }
 .bg-red {
-  background-color: rgb(252, 195, 185);
+  /* background-color: rgb(252, 195, 185); */
+  background: linear-gradient(rgb(252, 195, 185), rgb(247, 228, 224));
 }
 .bg-blue {
   background-color: rgb(192, 214, 253);
@@ -247,7 +250,8 @@ thead {
   margin-right: 0;
 }
 .btn {
-  background: #000;
+  background: rgb(97, 96, 96);
+
   padding: 15px 20px;
   color: #fff;
   border: none;
@@ -259,6 +263,9 @@ thead {
 .btn:hover {
   /* opacity: 0.6; */
   /* border: 0px solid #fff; */
+  background: rgb(0, 0, 0);
+  transition: 1s;
+
   color: rgb(247, 228, 120);
 }
 
