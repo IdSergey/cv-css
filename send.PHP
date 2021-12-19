@@ -1,7 +1,8 @@
 <?php
 
-$to = 'aydimir@Ukraine.net";
-$from = "From: <info@hot.net>\n\r";
+$to = "aydimir@ukr.net";
+$from = "From: <info@ukr.net>\n\r";
+$mail = $_POST["email"];
 
 
 ?>
