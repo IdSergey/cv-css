@@ -118,6 +118,9 @@ a:active {
   padding-top: 30px;
 }
 
+.social ul {
+  margin-left: 0px;
+}
 .social li {
   /* list-style-type: circle; */
   /* padding: 2px; */
@@ -147,7 +150,7 @@ ul {
 }
 
 .social li::before {
-  content: "\";
+  /* content: "\"; */
 }
 
 /* .box-model div {
