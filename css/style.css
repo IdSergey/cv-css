@@ -119,11 +119,21 @@ a:active {
 }
 
 .social li {
-  padding: 2px;
+  /* list-style-type: circle; */
+  /* padding: 2px; */
+  padding-left: 5px;
+  padding-right: 25px;
   display: inline;
   text-align: left;
-  color: red;
+  border-left: 5px solid rgb(175, 1, 1);
 
+  /* height: 10px; */
+  /* border-left-style: groove; */
+  /* border-radius: 10px; */
+  /* color: red; */
+
+  /* border-bottom: 2px solid red; */
+  /* text-decoration: none; */
   /* background-color: burlywood; */
   /* border: 5px solid red; */
   /* border-bottom-style: dotted; */
@@ -136,8 +146,8 @@ ul {
   /* list-style: none; */
 }
 
-ul li::before {
-  /* content: "\200B"; */
+.social li::before {
+  content: "\";
 }
 
 /* .box-model div {
