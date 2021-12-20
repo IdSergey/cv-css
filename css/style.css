@@ -40,7 +40,7 @@ a:active {
 .avatar {
   /* width: 200px; */
   height: 250px;
-  border-radius: 20px;
+  border-radius: 250px;
   /* box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.5); */
   box-shadow: 4px 4px 14px rgba(248, 246, 246, 0.5);
 }
@@ -120,8 +120,10 @@ a:active {
 
 .social li {
   padding: 2px;
-
+  display: inline;
   text-align: left;
+  color: red;
+
   /* background-color: burlywood; */
   /* border: 5px solid red; */
   /* border-bottom-style: dotted; */
@@ -131,11 +133,11 @@ a:active {
 }
 
 ul {
-  list-style: none;
+  /* list-style: none; */
 }
 
 ul li::before {
-  content: "\200B";
+  /* content: "\200B"; */
 }
 
 /* .box-model div {
@@ -164,7 +166,9 @@ ul li::before {
 }
 
 .bg-card {
-  background: linear-gradient(rgb(230, 109, 109), rgb(255, 255, 255));
+  /* background: linear-gradient(rgb(230, 109, 109), rgb(255, 255, 255)); */
+  /* background: linear-gradient(rgb(70, 70, 70), rgb(255, 255, 255)); */
+  background: rgb(196, 196, 196);
 }
 
 .card {
@@ -182,6 +186,7 @@ ul li::before {
 
 .card:hover,
 .up:hover {
+  background: rgb(240, 203, 181);
   /* box-shadow: 4px 4px 14px rgba(255, 255, 255, 1); */
   box-shadow: 0px 0px 24px rgba(255, 255, 255, 1);
   /* Анимация */
@@ -365,7 +370,8 @@ footer {
 
 .up-text {
   vertical-align: middle;
-  padding: auto 0px;
+  padding-top: 15px;
+  /* padding:  0px; */
   /* vertical-align: super; */
 
   height: inherit;
