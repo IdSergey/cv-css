@@ -12,7 +12,7 @@
 } */
 
 body {
-  background-color: antiquewhite;
+  background-color: rgb(24, 24, 24);
   font-size: 1rem;
   /* font-family: "Roboto", sans-serif; */
   font-size: 16px;
@@ -24,6 +24,7 @@ body {
 }
 a {
   color: #000;
+  /* color: rgb(214, 214, 214); */
   text-decoration: none;
 }
 
@@ -40,7 +41,8 @@ a:active {
   /* width: 200px; */
   height: 250px;
   border-radius: 20px;
-  box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.5); */
+  box-shadow: 4px 4px 14px rgba(248, 246, 246, 0.5);
 }
 
 .head-block {
@@ -67,12 +69,11 @@ a:active {
   position: absolute;
   top: 0px;
   right: 0px;
-
   text-align: right;
 }
 
 .info p {
-  color: black;
+  color: rgb(214, 214, 214);
   margin: 0;
   padding-bottom: 10px;
   font-style: italic;
@@ -82,14 +83,17 @@ a:active {
 .info {
   display: flex;
   margin-bottom: 20px;
+  color: rgb(214, 214, 214);
 }
 .info-text {
+  color: rgb(214, 214, 214);
   margin-left: 40px;
+  font-size: 1.1em;
 }
 
 .info-text h1 {
-  margin-top: 1rem;
-  color: rgb(129, 0, 0);
+  margin-top: 0px;
+  color: rgb(175, 1, 1);
 }
 .info-text h4 {
   margin-bottom: 0px;
@@ -97,6 +101,15 @@ a:active {
 
 .info-text ul {
   margin-top: 10px;
+  list-style-type: symbols(&raquo;);
+}
+
+.info-text a {
+  color: rgb(214, 214, 214);
+}
+
+.info-text h4 {
+  margin-top: 1em;
 }
 
 .container {
@@ -106,8 +119,8 @@ a:active {
 }
 
 .social li {
-  padding: 5px;
-  list-style-type: square;
+  padding: 2px;
+
   text-align: left;
   /* background-color: burlywood; */
   /* border: 5px solid red; */
@@ -115,6 +128,14 @@ a:active {
   /* border-top-width: 15px; */
   /* border-right-color: #bbb; */
   /* margin: 20px; */
+}
+
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "\200B";
 }
 
 /* .box-model div {
@@ -142,10 +163,16 @@ a:active {
   background-color: rgb(192, 214, 253);
 }
 
+.bg-card {
+  background: linear-gradient(rgb(230, 109, 109), rgb(255, 255, 255));
+}
+
 .card {
   padding: 15px 20px;
   margin-bottom: 20px;
   border-radius: 12px;
+  border-left: 8px solid rgb(175, 1, 1);
+  border-right: 8px solid rgb(175, 1, 1);
 }
 
 .card h2 {
@@ -153,16 +180,18 @@ a:active {
   color: rgb(3, 2, 59);
 }
 
-.card:hover {
-  box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.5);
+.card:hover,
+.up:hover {
+  /* box-shadow: 4px 4px 14px rgba(255, 255, 255, 1); */
+  box-shadow: 0px 0px 24px rgba(255, 255, 255, 1);
   /* Анимация */
-  -webkit-transition: 0.4s ease-out;
+  -webkit-transition: 0.01s ease-out;
   /* -webkit-transition-delay: 0.5s; */
-  -o-transition: 0.4s ease-out;
+  -o-transition: 0.01s ease-out;
   /* -o-transition-delay: 0.5s; */
-  -moz-transition: 0.4s ease-out;
+  -moz-transition: 0.01s ease-out;
   /* -moz-transition-delay: 0.5s; */
-  transition: 0.4s ease-out;
+  transition: 0.1s ease-out;
   /* transition-delay: 0.5s; */
 }
 
@@ -200,7 +229,11 @@ td {
   text-align: left;
 }
 .table tbody > tr:hover {
-  background-color: rgb(226, 253, 221);
+  background-color: transparent;
+  opacity: 0.8;
+  color: rgb(175, 1, 1);
+  transition: 700ms;
+  /* text-decoration: underline; */
 }
 .table td:nth-child(2),
 .table td:nth-child (3) {
@@ -251,7 +284,6 @@ thead {
 }
 .btn {
   background: rgb(97, 96, 96);
-
   padding: 15px 20px;
   color: #fff;
   border: none;
@@ -261,11 +293,8 @@ thead {
 }
 
 .btn:hover {
-  /* opacity: 0.6; */
-  /* border: 0px solid #fff; */
   background: rgb(0, 0, 0);
   transition: 1s;
-
   color: rgb(247, 228, 120);
 }
 
@@ -275,7 +304,6 @@ thead {
   border: 4px solid #000;
   margin-top: 40px;
   padding: 20px;
-
   height: 200px;
 }
 
@@ -325,7 +353,7 @@ footer {
 
 /* Кнопка НАВЕРХ */
 .up {
-  position: sticky;
+  position: relative;
   /* top: 50%; */
   /* right: 0px; */
   /* width: 50px; */
@@ -335,9 +363,9 @@ footer {
   text-align: center;
 }
 
-.up-text
-/* .up-text-link */ {
-  /* vertical-align: middle; */
+.up-text {
+  vertical-align: middle;
+  padding: auto 0px;
   /* vertical-align: super; */
 
   height: inherit;
@@ -347,5 +375,5 @@ footer {
   /* margin-top: 25px!important;  */
 }
 .up-text a {
-  vertical-align: middle;
+  /* vertical-align: middle; */
 }
