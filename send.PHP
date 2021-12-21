@@ -11,7 +11,7 @@ $from = "From: <$email>\n\r";
 
 	//	SEND	EMAIL
 	$header = "Content-type: text/html; charset=utf-8\r\n"; //тип и кодировка 
-	$header .= "From: ".$email."\r\n"; //from
+	$header .= "From: <".$email.">\r\n"; //from
 	$header .= "Reply-to:\r\n"; //Reply
 	$messag e= "<html> ";
 	$message .= "<head>";
