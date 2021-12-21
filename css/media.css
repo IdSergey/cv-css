@@ -38,4 +38,8 @@
   .form-group textarea {
     /* font-size: xx-large; */
   }
+
+  .table {
+    font-size: 20px;
+  }
 }
