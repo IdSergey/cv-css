@@ -12,9 +12,13 @@
   }
 }
 
-@media (width: <= 414px) {
+@media (max-width: 414px) {
   body {
-    font-size: 20px;
+    font-size: 1.5rem;
+  }
+  ul,
+  p {
+    font-size: 1.5rem;
   }
   .info {
     display: block;
@@ -29,6 +33,7 @@
 
   .info-text {
     font-size: 1.6em;
+    margin: 0px;
   }
   .container {
     /* font-size: xx-large; */
@@ -40,6 +45,9 @@
   }
 
   .table {
-    font-size: 20px;
+    font-size: 1.5rem;
+  }
+  .social ul {
+    margin-left: 0px;
   }
 }
