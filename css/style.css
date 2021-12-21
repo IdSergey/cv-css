@@ -1,6 +1,7 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap"); */
 
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto:ital@1&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto:ital@1&display=swap"); */
+@import url("@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto:ital@1&family=Rubik:wght@300;400&display=swap');");
 
 /* * {
   padding: 0px;
@@ -15,8 +16,10 @@ body {
   background-color: rgb(24, 24, 24);
   font-size: 1rem;
   /* font-family: "Roboto", sans-serif; */
+  /* font-family: "PT Sans", sans-serif; */
   font-size: 16px;
-  font-family: "PT Sans", sans-serif;
+
+  font-family: "Rubik", sans-serif;
 
   font-weight: normal;
   /* font-family: Arial, Helvetica, sans-serif; */
@@ -85,6 +88,7 @@ a:active {
   margin-bottom: 20px;
   color: rgb(214, 214, 214);
 }
+
 .info-text {
   color: rgb(214, 214, 214);
   margin-left: 40px;
@@ -95,6 +99,7 @@ a:active {
   margin-top: 0px;
   color: rgb(175, 1, 1);
 }
+
 .info-text h4 {
   margin-bottom: 0px;
 }
@@ -119,7 +124,8 @@ a:active {
 }
 
 .social ul {
-  margin-left: 0px;
+  /* margin-left: 0px; */
+  /* padding-left: 0px; */
 }
 .social li {
   /* list-style-type: circle; */
@@ -129,20 +135,6 @@ a:active {
   display: inline;
   text-align: left;
   border-left: 5px solid rgb(175, 1, 1);
-
-  /* height: 10px; */
-  /* border-left-style: groove; */
-  /* border-radius: 10px; */
-  /* color: red; */
-
-  /* border-bottom: 2px solid red; */
-  /* text-decoration: none; */
-  /* background-color: burlywood; */
-  /* border: 5px solid red; */
-  /* border-bottom-style: dotted; */
-  /* border-top-width: 15px; */
-  /* border-right-color: #bbb; */
-  /* margin: 20px; */
 }
 
 ul {
