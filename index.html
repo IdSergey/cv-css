@@ -200,7 +200,7 @@
       <div class="card bg-blue contact element-animation">
         <h2>Связаться со мной</h2>
 
-        <form class="myform">
+        <div id="myform">
           <div class="row">
             <div class="form-group">
               <label for="name">Ваше имя:</label>
@@ -218,9 +218,10 @@
             <textarea id="text" rows="2" cols="15"></textarea>
           </div>
 
-          <input class="btn" type="submit" value="Связаться!" />
-        </form>
-        <div class="mess"></div>
+          <input class="btn" type="submit" name="send" id="send" value="Связаться!" />
+
+        </div>
+        <div class="mess_result"></div>
       </div>
 
       <div class="up">
@@ -269,6 +270,53 @@
   for (let elm of elements) {
     observer.observe(elm);
   }
+</script>
+
+<script>
+  $(document).ready(function() {
+      // console.log('Hello World');
+      $('button#send').on('click', function () {
+          // console.log('Hello World');
+          let first_nameValue = $('input#name').val();
+          let emailValue = $('input#email').val();
+          let messValue = $('input#text').val();
+          let mess = $(".mess");
+          
+          // console.log(first_name);
+          // console.log(last_name);
+
+          //  Отпрравка данных
+          $.ajax({
+            method: "POST",
+            url: "send.php",
+            data: { first_name: first_nameValue, email: emailValue, mess: messValue,  },
+            
+            success: function (data) {
+              if( data == 1 ) {
+                mess.html("Email введен не верно");
+                return false;
+              }
+              mess.html("Спасибо. Ваше сообщение отправлено.");
+            },
+            error: function () {
+              mess.html("Ошибка отправки.");
+            }
+            
+            
+            // .done(function( msg ) {
+            //     // alert( "Сохранено: " + msg );
+            //     mess.html("Email введен не верно");
+            // });
+
+            // Обнуляем форму
+            $('input#name').val('');
+            $('input#email').val('');
+            $('input#text').val('');
+
+          })
+      });
+    }
+
 </script>
 
   </body>
