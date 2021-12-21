@@ -23,7 +23,7 @@
   .info {
     display: block;
     text-align: center;
-    /* font-size: xx-large; */
+    font-size: 20px;
   }
   .info-text h1 {
     font-weight: 600;
