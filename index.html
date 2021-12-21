@@ -229,7 +229,7 @@
           <a href="#up" class="up-text-link">&uarr; Наверх &uarr;</a>
         </div>
       </div>
-<!-- 
+      <!-- 
       <div class="bottom-menu">
         <div class="bottom-menu-text">
           bottom-menu  
@@ -249,75 +249,73 @@
         <div></div>
         <div></div>
       </div>
-    </div> -->
+      </div> -->
     
-    <footer></footer>
-    <!-- END container -->
+      <footer></footer>
+      <!-- END container -->
 
 
-<!-- Появление элементов на сайте -->
-<script>
-  function onEntry(entry) {
-    entry.forEach((change) => {
-      if (change.isIntersecting) {
-        change.target.classList.add("element-show");
-      }
-    });
-  }
-  let options = { threshold: [0.5] };
-  let observer = new IntersectionObserver(onEntry, options);
-  let elements = document.querySelectorAll(".element-animation");
-  for (let elm of elements) {
-    observer.observe(elm);
-  }
-</script>
-
-<script>
-  $(document).ready(function() {
-      // console.log('Hello World');
-      $('button#send').on('click', function () {
-          // console.log('Hello World');
-          let first_nameValue = $('input#name').val();
-          let emailValue = $('input#email').val();
-          let messValue = $('input#text').val();
-          let mess = $(".mess");
-          
-          // console.log(first_name);
-          // console.log(last_name);
-
-          //  Отпрравка данных
-          $.ajax({
-            method: "POST",
-            url: "send.php",
-            data: { first_name: first_nameValue, email: emailValue, mess: messValue,  },
-            
-            success: function (data) {
-              if( data == 1 ) {
-                mess.html("Email введен не верно");
-                return false;
+      <!-- Появление элементов на сайте -->
+        <script>
+          function onEntry(entry) {
+            entry.forEach((change) => {
+              if (change.isIntersecting) {
+                change.target.classList.add("element-show");
               }
-              mess.html("Спасибо. Ваше сообщение отправлено.");
-            },
-            error: function () {
-              mess.html("Ошибка отправки.");
-            }
+            });
+          }
+          let options = { threshold: [0.5] };
+          let observer = new IntersectionObserver(onEntry, options);
+          let elements = document.querySelectorAll(".element-animation");
+          for (let elm of elements) {
+            observer.observe(elm);
+          }
+        </script>
+
+    <script>
+      $(document).ready(function() {
+        // console.log('Hello World');
+        $('button#send').on('click', function () {
+            // console.log('Hello World');
+            let first_nameValue = $('input#name').val();
+            let emailValue = $('input#email').val();
+            let messValue = $('input#text').val();
+            let mess = $(".mess");
             
-            
-            // .done(function( msg ) {
-            //     // alert( "Сохранено: " + msg );
-            //     mess.html("Email введен не верно");
-            // });
+            // console.log(first_name);
+            // console.log(last_name);
 
-            // Обнуляем форму
-            $('input#name').val('');
-            $('input#email').val('');
-            $('input#text').val('');
+            //  Отпрравка данных
+            $.ajax({
+              method: "POST",
+              url: "send.php",
+              data: { first_name: first_nameValue, email: emailValue, mess: messValue,  },
+              
+              success: function (data) {
+                if( data == 1 ) {
+                  mess.html("Email введен не верно");
+                  return false;
+                }
+                mess.html("Спасибо. Ваше сообщение отправлено.");
+              },
+              error: function () {
+                mess.html("Ошибка отправки.");
+              }
+              
+              
+              // .done(function( msg ) {
+              //     // alert( "Сохранено: " + msg );
+              //     mess.html("Email введен не верно");
+              // });
 
-          })
-      });
-    }
+              // Обнуляем форму
+              $('input#name').val('');
+              $('input#email').val('');
+              $('input#text').val('');
 
-</script>
-
-  </body>
+            })
+        });
+      }
+    </script>
+</body>
 </html>
