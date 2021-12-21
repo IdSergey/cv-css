@@ -14,11 +14,11 @@
 
 @media (max-width: 414px) {
   body {
-    /* font-size: 1.5rem; */
+    font-size: 1.5em;
   }
   ul,
   p {
-    font-size: 1.5rem;
+    /* font-size: 1.5em; */
   }
   .info {
     display: block;
@@ -32,7 +32,7 @@
   }
 
   .info-text {
-    font-size: 1.6em;
+    /* font-size: 1.6em; */
     margin: 0px;
   }
   .container {
@@ -45,7 +45,7 @@
   }
 
   .table {
-    font-size: 1.5rem;
+    font-size: 1.2em;
   }
   .social ul {
     margin-left: 0px;
