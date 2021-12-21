@@ -6,11 +6,11 @@ $text = trim(htmlspecialchars( $_POST['text']));
 
 
 $to = "aydimir@ukr.net";
-$from = "From: <aydimir@ukr.net>\n\r";
+$from = "From: <$email>\n\r";
 
 
 	//	SEND	EMAIL
-	$header = "Content-type: text/html; charset=\"utf-8\"\r\n"; //тип и кодировка 
+	$header = "Content-type: text/html; charset=utf-8\r\n"; //тип и кодировка 
 	$header .= "From: ".$email."\r\n"; //from
 	$header .= "Reply-to:\r\n"; //Reply
 	$messag e= "<html> ";
@@ -24,6 +24,13 @@ $from = "From: <aydimir@ukr.net>\n\r";
 $message.="</table></body></html>";
 
 $subj="Связаться со мной";
-mail($to,$subj,$message,$header);
+
+if(filter_var($email, FILTER_VALIDATE_EMAIL) ) {
+  mail($to,$subj,$message,$header);  
+}else {
+    echo 1;
+}
+
+
 
 ?>
