@@ -31,7 +31,7 @@
   }
 
   .info-text {
-    font-size: xx-large;
+    font-size: large;
     margin: 0px;
   }
   .container {
@@ -40,7 +40,7 @@
 
   .form-group input,
   .form-group textarea {
-    font-size: xx-large;
+    font-size: large;
   }
 
   .table {
