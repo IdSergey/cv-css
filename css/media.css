@@ -49,6 +49,7 @@
   }
   .social ul {
     /* margin-left: 0px; */
-    padding-inline-start: 40px;
+    padding-inline-start: 0px;
+    margin-block-start: 0px;
   }
 }
