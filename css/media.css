@@ -23,7 +23,6 @@
   .info {
     display: block;
     text-align: center;
-    font-size: 20px;
   }
   .info-text h1 {
     font-weight: 600;
@@ -32,7 +31,7 @@
   }
 
   .info-text {
-    /* font-size: 1.6em; */
+    font-size: 20px;
     margin: 0px;
   }
   .container {
