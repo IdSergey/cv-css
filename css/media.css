@@ -12,7 +12,7 @@
   }
 }
 
-@media (max-width: 414px) {
+@media (min-width: 320px) and (max-width: 480px) {
   body {
     font-size: 1.5em;
   }
