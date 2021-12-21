@@ -26,6 +26,10 @@
     margin-top: 1em;
     /* color: rgb(175, 1, 1); */
   }
+
+  .info-text {
+    font-size: 1.6em;
+  }
   .container {
     /* font-size: xx-large; */
   }
