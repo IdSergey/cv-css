@@ -5,9 +5,8 @@ $email = trim(htmlspecialchars( $_POST['email']));
 $text = trim(htmlspecialchars( $_POST['text']));
 
 
+// $to = "aydimir@ukr.net";
 $to = "aydimir@ukr.net";
-$from = "From: <$email>\n\r";
-
 
 	//	SEND	EMAIL
 	$header = "Content-type: text/html; charset=utf-8\r\n"; //тип и кодировка 
