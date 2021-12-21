@@ -12,7 +12,7 @@
   }
 }
 
-@media (max-width: 414px) {
+@media (width: <= 414px) {
   body {
     font-size: 20px;
   }
