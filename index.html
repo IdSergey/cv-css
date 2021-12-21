@@ -297,23 +297,21 @@
                   return false;
                 }
                 mess.html("Спасибо. Ваше сообщение отправлено.");
+                // Обнуляем форму
+                $('input#name').val('');
+                $('input#email').val('');
+                $('input#text').val('');
               },
               error: function () {
                 mess.html("Ошибка отправки.");
               }
-              
-              
               // .done(function( msg ) {
               //     // alert( "Сохранено: " + msg );
               //     mess.html("Email введен не верно");
               // });
 
-              // Обнуляем форму
-              $('input#name').val('');
-              $('input#email').val('');
-              $('input#text').val('');
-
             })
+
         });
       }
     </script>
