@@ -1,8 +1,7 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap"); */
 
 /* @import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto:ital@1&display=swap"); */
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
 /* * {
   padding: 0px;
   margin: 0px;
@@ -96,6 +95,7 @@ a:active {
 }
 
 .info-text h1 {
+  font-weight: 600;
   margin-top: 0px;
   color: rgb(175, 1, 1);
 }
