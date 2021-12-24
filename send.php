@@ -39,9 +39,11 @@ $subj="Связаться со мной";
 
 if(filter_var($email, FILTER_VALIDATE_EMAIL) ) {
   mail($to,$subj,$message,$header);  
-  echo "OK";
+  // echo "OK";
 }else {
-    echo 1;
+    // echo 1;
 }
+
+header("Location: $_SERVER['REQUEST_URI'] ");
 
 ?>
