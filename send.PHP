@@ -4,6 +4,19 @@ $name = trim(htmlspecialchars( $_POST['name']));
 $email = trim(htmlspecialchars( $_POST['email']));
 $text = trim(htmlspecialchars( $_POST['text']));
 
+if (!$name) {
+  echo "<script> akert('Введите имя');</script>";
+  history.go(-1);
+}
+if (!$email) {
+  echo "<script> akert('Введите email');</script>";
+  history.go(-1);
+}
+if (!$text) {
+  echo "<script> akert('Наишите сообщение');</script>";
+  history.go(-1);
+}
+
 
 // $to = "aydimir@ukr.net";
 $to = "aydimir@ukr.net";
@@ -26,6 +39,7 @@ $subj="Связаться со мной";
 
 if(filter_var($email, FILTER_VALIDATE_EMAIL) ) {
   mail($to,$subj,$message,$header);  
+  echo "OK";
 }else {
     echo 1;
 }

@@ -175,7 +175,7 @@
             <a onclick="toggle('work')">&#9881;</a>
           </div>
         </div>
-        <p id="work">HTML, CSS, JS, AJAX, Jquery, PHP, WordPress.</p>
+        <p id="work">HTML, CSS, JS, AJAX, jQuery, PHP, WordPress.</p>
         
       </div>
 
@@ -199,31 +199,33 @@
       <div class="card bg-blue contact element-animation">
         <h2>Связаться со мной</h2>
 
-        <div id="myform">
-          <div class="row">
-            <div class="form-group">
-              <label for="name">Ваше имя:</label>
-              <input type="text" id="name" placeholder="Введите ваше имя..." />
+        <div>
+          <form id="myform" action="send.php">
+            <div class="row">
+              <div class="form-group">
+                <label for="name">Ваше имя: *</label>
+                <input type="text" id="name" placeholder="Введите ваше имя..." />
+              </div>
+    
+              <div class="form-group">
+                <label for="email">Ваш Email: *</label>
+                <input type="email" id="email" placeholder="Введите email..." />
+              </div>
             </div>
-  
-            <div class="form-group">
-              <label for="email">Ваш Email:</label>
-              <input type="email" id="email" placeholder="Введите email..." />
+
+            <div class="form-group">  
+              <label for="text">Вашe сообщение: *</label>
+              <textarea id="text" rows="2" cols="15"></textarea>
             </div>
-          </div>
-
-          <div class="form-group">  
-            <label for="text">Вашe сообщение:</label>
-            <textarea id="text" rows="2" cols="15"></textarea>
-          </div>
-
-          <input class="btn" type="submit" name="send" id="send" value="Связаться!" />
-
+            <p>* - обзательно заполнить</p>
+            <input class="btn" type="submit" name="send" id="send" value="Связаться!" />
+          </form>
         </div>
+        
         <div class="mess_result"></div>
       </div>
 
-      <div class="up">
+      <div class="up element-animation">
         <div class="up-text">
           <a href="#up" class="up-text-link">&uarr; Наверх &uarr;</a>
         </div>
@@ -256,21 +258,22 @@
 
       <!-- Появление элементов на сайте -->
         <script>
-          function onEntry(entry) {
-            entry.forEach((change) => {
-              if (change.isIntersecting) {
-                change.target.classList.add("element-show");
-              }
-            });
-          }
-          let options = { threshold: [0.5] };
-          let observer = new IntersectionObserver(onEntry, options);
-          let elements = document.querySelectorAll(".element-animation");
-          for (let elm of elements) {
-            observer.observe(elm);
-          }
+          // function onEntry(entry) {
+          //   entry.forEach((change) => {
+          //     if (change.isIntersecting) {
+          //       change.target.classList.add("element-show");
+          //     }
+          //   });
+          // }
+          // let options = { threshold: [0.5] };
+          // let observer = new IntersectionObserver(onEntry, options);
+          // let elements = document.querySelectorAll(".element-animation");
+          // for (let elm of elements) {
+          //   observer.observe(elm);
+          // }
         </script>
-        <!-- <script src="js/myscripts.js"></script> -->
+        <script src="js/myscripts.js"></script>
+        <script src="js/animation.js"></script>
 
 </body>
 </html>

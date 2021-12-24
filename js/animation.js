@@ -1,3 +1,4 @@
+// Появление элементов на сайте
 function onEntry(entry) {
   entry.forEach((change) => {
     if (change.isIntersecting) {

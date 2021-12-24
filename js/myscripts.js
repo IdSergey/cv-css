@@ -9,7 +9,7 @@ function toggle(name) {
   }
 }
 
-//  Обрботка форсы
+//  Обрботка формы
 
 // $('.myform').submit(function (e) {
 //   e = preventDefault();
