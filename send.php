@@ -45,4 +45,9 @@ if(filter_var($email, FILTER_VALIDATE_EMAIL) ) {
 }
 // header("Location: ".$_SERVER['HTTP_REFERER']);
 // exit;
+
+// getmxrr — Получает записи MX, соответствующие переданному доменному имени хоста
+// getmxrr(string $hostname, array &$hosts, array &$weights = null): bool
+
+
 ?>

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/media.css" />
     <link rel="stylesheet" href="css/animation.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>    <title>CV SERGIO ID</title>
+    <title>CV SERGIO ID</title>
   </head>
   <body>
     <a name="up"></a>
@@ -199,7 +199,7 @@
         <h2>Связаться со мной</h2>
 
         <div>
-          <form id="myform" method="post" action="">
+          <form id="myform" method="post">
             <div class="row">
               <div class="form-group">
                 <label for="name">Ваше имя: *</label>
@@ -269,33 +269,36 @@
           observer.observe(elm);
         }
     </script>
-
-    <script>
-      //  Обрботка формы
-      $('.myform').submit(function (e) {
+  <script>
+    //  Обрботка формы
+    $(function(){
+      $(".myform").submit(function(e) {
         e = preventDefault();
-        let th = $(this);
-        let mess = $('.mess_result');
+        let form = $(this);
+        let mess = $(".mess_result");
 
-        $.ajax( {
+        $.ajax({
           url: "send.php",
           type: "post",
-          data: th.serialize(),
+          data: form.serialize(),
           success: function (data) {
-            if( data == 1) {
+            if (data == 1) {
               mess.html("Email введен не верно");
               // mess.html("Сообщение отправлено.");
               return false;
             }
             mess.html("Спасибо. Ваше сообщение отправлено.");
-          },error: function () {
+          },
+          error: function () {
             mess.html("Ошибка отправки.");
-          }
-        }
-        );
-      }
-    </script>    
-    // <script src="js/myscripts.js"></script>
-  
+          },
+        });
+        });
+    });
+  </script>
+
+  <script src="js/myscripts.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
 </body>
 </html>
