@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/media.css" />
     <link rel="stylesheet" href="css/animation.css" />
-    <title>CV SERGIO ID</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>    <title>CV SERGIO ID</title>
   </head>
   <body>
     <a name="up"></a>
@@ -174,7 +174,7 @@
             <a onclick="toggle('work')">&#9881;</a>
           </div>
         </div>
-        <p id="work">HTML, CSS, JS, AJAX, jQuery, PHP, WordPress.</p>
+        <p id="work">HTML, CSS, JS, AJAX, jQuery, PHP, MySql, WordPress.</p>
         
       </div>
 
@@ -253,10 +253,49 @@
     
       <footer></footer>
       <!-- END container -->
+    <script>
+      // Появление элементов на сайте
+        function onEntry(entry) {
+          entry.forEach((change) => {
+            if (change.isIntersecting) {
+              change.target.classList.add("element-show");
+            }
+          });
+        }
+        let options = { threshold: [0.5] };
+        let observer = new IntersectionObserver(onEntry, options);
+        let elements = document.querySelectorAll(".element-animation");
+        for (let elm of elements) {
+          observer.observe(elm);
+        }
+    </script>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="js/myscripts.js"></script>
-  <script src="js/animation.js"></script>
+    <script>
+      //  Обрботка формы
+      $('.myform').submit(function (e) {
+        e = preventDefault();
+        let th = $(this);
+        let mess = $('.mess_result');
 
+        $.ajax( {
+          url: "send.php",
+          type: "post",
+          data: th.serialize(),
+          success: function (data) {
+            if( data == 1) {
+              mess.html("Email введен не верно");
+              // mess.html("Сообщение отправлено.");
+              return false;
+            }
+            mess.html("Спасибо. Ваше сообщение отправлено.");
+          },error: function () {
+            mess.html("Ошибка отправки.");
+          }
+        }
+        );
+      }
+    </script>    
+    // <script src="js/myscripts.js"></script>
+  
 </body>
 </html>
