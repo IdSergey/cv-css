@@ -41,9 +41,8 @@ if(filter_var($email, FILTER_VALIDATE_EMAIL) ) {
   mail($to,$subj,$message,$header);  
   // echo "OK";
 }else {
-    // echo 1;
+    echo 1;
 }
-// echo $_SERVER['HTTP_REFERER']; 
-header("Location: ".$_SERVER['HTTP_REFERER']);
-exit;
+// header("Location: ".$_SERVER['HTTP_REFERER']);
+// exit;
 ?>
