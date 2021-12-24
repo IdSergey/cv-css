@@ -5,15 +5,15 @@ $email = trim(htmlspecialchars( $_POST['email']));
 $text = trim(htmlspecialchars( $_POST['text']));
 
 if (!$name) {
-  echo "<script> akert('Введите имя');  history.back();</script>";
+  echo "<script> alert('Введите имя');  history.back();</script>";
   exit;
 }
 if (!$email) {
-  echo "<script> akert('Введите email');  history.back();</script>";
+  echo "<script> alert('Введите email');  history.back();</script>";
   exit;
 }
 if (!$text) {
-  echo "<script> akert('Наишите сообщение');  history.back();</script>";
+  echo "<script> alert('Наишите сообщение');  history.back();</script>";
   exit;
 }
 
