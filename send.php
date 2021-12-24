@@ -29,8 +29,8 @@ $to = "aydimir@ukr.net";
 	$message .= "<head>";
 
   $message.="<body><table width='100%' border='0' cellpadding='0' cellspacing='0'  class='text_black_11'>";
-  $message.="<tr><td> ".$name." </td></tr>";
-  $message.="<tr><td> ".$email." </td></tr>";
+  $message.="<tr><td>From: ".$name." </td></tr>";
+  $message.="<tr><td>e-mail: ".$email." </td></tr>";
   $message.="<tr><td> ".$text." </td></tr>";
 
 $message.="</table></body></html>";
