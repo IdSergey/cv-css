@@ -44,7 +44,13 @@ if(filter_var($email, FILTER_VALIDATE_EMAIL) ) {
     // echo 1;
 }
 
+echo $_SERVER['SERVER_NAME'];
+echo  "<br>";
 echo $_SERVER['REQUEST_URI']; 
+echo  "<br>";
+echo $_SERVER['DOCUMENT_ROOT']; 
+echo  "<br>";
+echo $_SERVER['HTTP_REFERER']; 
 // header("Location: $_SERVER['REQUEST_URI']; ");
 
 ?>
