@@ -28,7 +28,7 @@ $to = "aydimir@ukr.net";
 	$header = "Content-type: text/html; charset=utf-8\r\n"; //тип и кодировка 
 	$header .= "From: <".$email.">\r\n"; //from
 	$header .= "Reply-to:\r\n"; //Reply
-	$messag e= "<html> ";
+	$messag .= "<html> ";
 	$message .= "<head>";
 
   $message.="<body><table width='100%' border='0' cellpadding='0' cellspacing='0'  class='text_black_11'>";
