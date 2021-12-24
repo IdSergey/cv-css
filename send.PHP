@@ -6,15 +6,18 @@ $text = trim(htmlspecialchars( $_POST['text']));
 
 if (!$name) {
   echo "<script> akert('Введите имя');</script>";
-  history.go(-1);
+  history.back();
+  exit;
 }
 if (!$email) {
   echo "<script> akert('Введите email');</script>";
-  history.go(-1);
+  history.back();
+  exit;
 }
 if (!$text) {
   echo "<script> akert('Наишите сообщение');</script>";
-  history.go(-1);
+  history.back();
+  exit;
 }
 
 
