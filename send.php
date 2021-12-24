@@ -44,6 +44,7 @@ if(filter_var($email, FILTER_VALIDATE_EMAIL) ) {
     // echo 1;
 }
 
-header("Location: $_SERVER['REQUEST_URI'] ");
+echo $_SERVER['REQUEST_URI']; 
+// header("Location: $_SERVER['REQUEST_URI']; ");
 
 ?>
